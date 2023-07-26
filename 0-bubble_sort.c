@@ -24,6 +24,13 @@ void bubble_sort(int *array, size_t size)
 	}
 }
 
+/**
+ * swap_num - swap two elements
+ * @a: pointer to first element
+ * @b: pointer to second element
+ * Return: Always 1 (Sucess)
+ */
+
 unsigned int swap_num(int *a, int *b)
 {
 	int tmp;
