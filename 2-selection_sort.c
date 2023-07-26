@@ -7,22 +7,26 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	unsigned int i, j;
+	unsigned int i, j, tmp, flag;
 
 	if (array == NULL)
 		return;
-	for (i = 0; i < size; i++)
+	for (i = 0; i < size - 1; i++)
 	{
+		flag = 0;
+		tmp = i;
 		for (j = i + 1; j < size; j++)
 		{
 			if (array[i] > array[j])
 			{
-				swap_num(&array[i], &array[j]);
+				tmp = j;
+				flag = 1;
 			}
 		}
-		print_array(array, size);
+		swap_num(&array[i], &array[tmp]);
+		if (flag != 0)
+			print_array(array, size);
 	}
-
 }
 
 /**
