@@ -31,5 +31,5 @@ unsigned int swap_num(int *a, int *b)
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
-	return 1;
+	return (1);
 }
